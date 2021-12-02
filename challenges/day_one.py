@@ -1,11 +1,4 @@
-import os
-
-def read_input(path):
-    lines = []
-    with open(path) as file:
-        while (line := file.readline().rstrip()):
-            lines.append(int(line))
-    return lines
+from helpers import read_input
 
 def day_one_part_one(puzzle_input):
     incr = 0
@@ -24,8 +17,7 @@ def day_one_part_two(puzzle_input):
     return result
 
 if __name__ == '__main__':
-    path = os.path.join('inputs', 'day_one')
-    items = read_input(path)
-    print('Day 1:')
+    items = read_input('day_one.txt', parse_int=True)
+    print('Day One:')
     print(f'-- Part One: {day_one_part_one(items)}')
     print(f'-- Part Two: {day_one_part_two(items)}')
