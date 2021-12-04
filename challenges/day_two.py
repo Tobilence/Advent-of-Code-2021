@@ -28,6 +28,7 @@ def day_two_part_two(puzzle_input):
             aim += int(split[1])
     return horizontal * depth
 
+
 if __name__ == '__main__':
     items = read_input('day_two.txt')
     print("Day Two:")
